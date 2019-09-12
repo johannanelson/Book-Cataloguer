@@ -63,6 +63,7 @@ private ArrayList<String> textFile = new ArrayList<String>();
             }
             System.out.println("The phrase '" + e + "' is used " + epithetCounter + " times.\n");
 
+            // Redirect output to separate file
             System.out.println("Would you like to see the instances in a separate txt file? Type 'yes' or 'no'.");
             String answer = s.nextLine();
             if (answer.equals("yes")) {
@@ -84,6 +85,7 @@ private ArrayList<String> textFile = new ArrayList<String>();
         }
       }
 
+        // Method to insert text, word by word, into HashMap to keep track of number of usages
         public void hashTheText() {
             HashMap<String, Integer> textMap = new HashMap<>();
             for (int i = 0; i < textFile.size(); i++) {
@@ -98,6 +100,7 @@ private ArrayList<String> textFile = new ArrayList<String>();
                 }
             }
 
+            // Printing HashMap 
             LinkedList<Map.Entry<String, Integer>> list = new LinkedList<>(textMap.entrySet());
             Comparator<Map.Entry<String, Integer>> comparator = Comparator.comparing(Map.Entry::getValue);
             Collections.sort(list, comparator.reversed());
