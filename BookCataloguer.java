@@ -23,8 +23,8 @@ private ArrayList<String> textFile = new ArrayList<String>();
               }
           }
       }
-      catch (IOException e){
-          System.out.println("IOException. Check the input of your file name.");
+      catch (Exception e){
+          System.out.println("***ERROR: Check the input of your file name. ");
       }
   }
 
